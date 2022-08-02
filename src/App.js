@@ -16,11 +16,11 @@ function App() {
 
         <Header />
 
-        <div class="grid contenedor contenido-principal">
+        <div className="grid contenedor contenido-principal">
 
           <Navbar />
 
-          <main class="caja-contenido col-9">
+          <main className="caja-contenido col-9">
             <Routes>
               <Route exact path="/customers" element={<Customers />} />
               <Route exact path="/products" element={<Products />} />
