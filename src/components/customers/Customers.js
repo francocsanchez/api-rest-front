@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
+import { Link } from 'react-router-dom'
 import clientAxios from "../../config/axios";
 
 import Customer from "./Customer";
@@ -18,7 +19,12 @@ const Customers = () => {
 
     return (
         <Fragment>
-            <h1>Clientes</h1>
+            <h2>Clientes</h2>
+
+            <Link to={"/customers/create"} className="btn btn-verde nvo-cliente"> 
+            <i className="fas fa-plus-circle"></i>
+                Nuevo Cliente
+            </Link>
 
             <ul className="listado-clientes">
                 {
