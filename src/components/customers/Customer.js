@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
+import { Link } from 'react-router-dom'
 
-const Customer = ({customer}) => {
+const Customer = ({ customer }) => {
     return (
         <Fragment>
             <li className="cliente">
@@ -11,10 +12,10 @@ const Customer = ({customer}) => {
                     <p>Tel: {customer.phone}</p>
                 </div>
                 <div className="acciones">
-                    <a href="#" className="btn btn-azul">
+                    <Link to={`/customers/edit/${customer._id}`} className="btn btn-azul">
                         <i className="fas fa-pen-alt"></i>
                         Editar Cliente
-                    </a>
+                    </Link>
                     <button type="button" className="btn btn-rojo btn-eliminar">
                         <i className="fas fa-times"></i>
                         Eliminar Cliente
