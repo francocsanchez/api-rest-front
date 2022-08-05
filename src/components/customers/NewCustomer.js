@@ -1,7 +1,12 @@
 import React, { Fragment, useState } from "react";
 import clientAxios from "../../config/axios";
+import { useNavigate } from 'react-router-dom'
+
+import Swal from "sweetalert2";
 
 const NewCustomer = () => {
+
+    let navigate = useNavigate();
 
     const [customer, saveCustomer] = useState({
         name: '',
@@ -33,7 +38,12 @@ const NewCustomer = () => {
 
         clientAxios.post('/customers', customer)
             .then(res => {
-                console.log(res);
+                Swal.fire(
+                    'Good job!',
+                    'You clicked the button!',
+                    'success'
+                )
+                navigate('/', {replace:true});
             });
     }
 
