@@ -42,8 +42,6 @@ const EditCustomer = () => {
             ...customer,
             [e.target.name]: e.target.value
         })
-
-        console.log(customer)
     }
 
     const putCustomer = e => {
@@ -81,7 +79,7 @@ const EditCustomer = () => {
                         type="text"
                         placeholder="Nombre Cliente"
                         name="name"
-                        value={customer.name}
+                        defaultValue={customer.name}
                         onChange={updateCustomer}
                     />
                 </div>
@@ -92,7 +90,7 @@ const EditCustomer = () => {
                         type="text"
                         placeholder="Apellido Cliente"
                         name="lastname"
-                        value={customer.lastname}
+                        defaultValue={customer.lastname}
                         onChange={updateCustomer}
                     />
                 </div>
@@ -103,7 +101,7 @@ const EditCustomer = () => {
                         type="text"
                         placeholder="Empresa Cliente"
                         name="company"
-                        value={customer.company}
+                        defaultValue={customer.company}
                         onChange={updateCustomer}
                     />
                 </div>
@@ -114,7 +112,7 @@ const EditCustomer = () => {
                         type="email"
                         placeholder="Email Cliente"
                         name="email"
-                        value={customer.email}
+                        defaultValue={customer.email}
                         onChange={updateCustomer}
                     />
                 </div>
@@ -125,7 +123,7 @@ const EditCustomer = () => {
                         type="tel"
                         placeholder="Teléfono Cliente"
                         name="phone"
-                        value={customer.phone}
+                        defaultValue={customer.phone}
                         onChange={updateCustomer}
                     />
                 </div>
