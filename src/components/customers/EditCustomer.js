@@ -51,24 +51,23 @@ const EditCustomer = () => {
 
         clientAxios.put(`/customers/${id}`, customer)
             .then(res => {
-                if(res.status == 200){
+                if (res.status === 200) {
                     Swal.fire(
                         'Actualizado',
                         `Cliente ${res.data.lastname}, ${res.data.name} actualizado correctamente`,
                         'success'
                     )
-                    navigate('/customers', {replace:true});
-                }else{
+                    navigate('/customers', { replace: true });
+                } else {
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
                         text: 'Ocurrio un error actualizando',
-                      })
+                    })
                 }
             });
 
     }
-
 
     return (
         <Fragment>
