@@ -39,11 +39,11 @@ const NewCustomer = () => {
         clientAxios.post('/customers', customer)
             .then(res => {
                 Swal.fire(
-                    'Good job!',
-                    'You clicked the button!',
+                    'Agregado',
+                    'El cliente se creo correctamente',
                     'success'
                 )
-                navigate('/', {replace:true});
+                navigate('/customers', {replace:true});
             });
     }
 

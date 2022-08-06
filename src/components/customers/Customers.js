@@ -15,7 +15,7 @@ const Customers = () => {
 
     useEffect(() => {
         getCustomers();
-    }, [])
+    }, [customers]) // If change the state, reload function.
 
     return (
         <Fragment>
