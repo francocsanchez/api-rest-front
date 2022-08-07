@@ -12,7 +12,7 @@ const EditProduct = () => {
     const [product, setProduct] = useState({
         name: '',
         price: '',
-        img:''
+        img: ''
     });
 
     const [img, setImg] = useState('')
@@ -37,24 +37,25 @@ const EditProduct = () => {
         setImg(e.target.files[0])
     }
 
+    //! NO SE ESTA ACTUALIZANDO EL PRODCUTO EN LA BASE DATOS
     const editProduct = async e => {
         e.preventDefault();
 
         const formData = new FormData();
-        
+
         formData.append('name', product.name);
         formData.append('price', product.price);
         formData.append('img', img);
-        
+
         try {
             const res = await clientAxios.put(`/products/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             })
-            
+
             Swal.fire(
-                'Editado',
+                'Actualizado',
                 res.data.msj,
                 'success'
             )
