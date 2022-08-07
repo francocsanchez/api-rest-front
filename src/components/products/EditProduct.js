@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
-import clientAxios from "../../config/axios";
 import { useNavigate, useParams } from 'react-router-dom';
+import clientAxios from "../../config/axios";
 
 import Swal from "sweetalert2";
 
@@ -37,7 +37,6 @@ const EditProduct = () => {
         setImg(e.target.files[0])
     }
 
-    //! NO SE ESTA ACTUALIZANDO EL PRODCUTO EN LA BASE DATOS
     const editProduct = async e => {
         e.preventDefault();
 
